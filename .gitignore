@@ -1,10 +1,4 @@
----
-
-### 2. `.gitignore`
-This prevents "junk" files, temporary test files, and Python cache from being uploaded to your GitHub.
-
-```text
-# Python 
+ 
 __pycache__/
 *.py[cod]
 *$py.class
@@ -23,4 +17,5 @@ ENV/
 Thumbs.db
 
 # WSL/Configuration backups
+
 .wslconfig.bak
