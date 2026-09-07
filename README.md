@@ -1,6 +1,7 @@
 # NeuroRig (WSL2 Optimized) 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20088305.svg)](https://doi.org/10.5281/zenodo.20088305)
+[![CI](https://github.com/TravisBeckwith/NeuroRig/actions/workflows/ci.yml/badge.svg)](https://github.com/TravisBeckwith/NeuroRig/actions/workflows/ci.yml)
 
 A lightweight Python diagnostic tool designed for neuroimaging researchers to assess if their hardware can handle intensive MRI processing pipelines (e.g., FreeSurfer, fMRIPrep, FSL, AFNI).
 
@@ -30,6 +31,13 @@ MRI processing is resource-heavy. NeuroRig evaluates:
 
    This single script covers CPU, RAM, GPU, disk I/O benchmarking, and (when
    applicable) WSL2 memory-allocation checks — there is no separate v2 file.
+
+## Running Tests
+```bash
+pip install -r requirements-dev.txt
+pytest tests/ -v
+```
+Tests run automatically on every push and pull request via GitHub Actions (see badge above).
 
 ## Interpreting Results
 - **RAM < 16GB:** Stick to basic structural viewing and lightweight preprocessing.
